@@ -1,5 +1,4 @@
-{% set version = '0.2-4' %}
-
+{% set version = '0.3-0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,20 +9,22 @@ package:
 source:
   fn: mlogit_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/mlogit_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/mlogit/mlogit_{{ version }}.tar.gz
-  sha256: 5d9f5d20efd9d654e15875d813d9da3e756c7b8f25d8bb1f5d689a128fa7cd96
+    - {{ cran_mirror }}/src/contrib/mlogit_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/mlogit/mlogit_{{ version }}.tar.gz
+  sha256: c1d99d39fd411fb01d593f289325ff025bc714611818ed9310da7d1f167f2f3b
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-formula
     - r-mass
@@ -31,7 +32,6 @@ requirements:
     - r-maxlik
     - r-statmod
     - r-zoo
-
   run:
     - r-base
     - r-formula
@@ -43,16 +43,17 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('mlogit')"  # [not win]
+    - $R -e "library('mlogit')"           # [not win]
     - "\"%R%\" -e \"library('mlogit')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=mlogit
+  home: https://cran.r-project.org/package=mlogit, https://r-forge.r-project.org/projects/mlogit/
   license: GPL (>= 2)
+  summary: Maximum Likelihood estimation of random utility discrete choice models (logit and
+    probit).
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
-  summary: Estimation of the multinomial logit model
 
 extra:
   recipe-maintainers:
@@ -61,4 +62,5 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
     - nsoranzo
