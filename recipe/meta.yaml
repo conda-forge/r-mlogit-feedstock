@@ -14,9 +14,9 @@ source:
   sha256: c1d99d39fd411fb01d593f289325ff025bc714611818ed9310da7d1f167f2f3b
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,8 +52,7 @@ about:
   summary: Maximum Likelihood estimation of random utility discrete choice models (logit and
     probit).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
