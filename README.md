@@ -14,9 +14,8 @@ Summary: Maximum Likelihood estimation of random utility discrete choice models 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-mlogit-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-mlogit-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-mlogit-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-mlogit-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-mlogit-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-mlogit-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-mlogit-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-mlogit-feedstock)
 
 Current release info
 ====================
