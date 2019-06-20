@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About r-mlogit
 ==============
 
@@ -11,15 +7,22 @@ Package license: GPL (>= 2)
 
 Feedstock license: BSD 3-Clause
 
-Summary: Maximum Likelihood estimation of random utility discrete choice models (logit and probit).
+Summary: Maximum Likelihood estimation of random utility discrete choice models, as described in Kenneth Train (2012) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
 
 
 
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-mlogit-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-mlogit-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1368&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mlogit-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
