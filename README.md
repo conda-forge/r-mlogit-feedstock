@@ -3,11 +3,11 @@ About r-mlogit
 
 Home: https://cran.r-project.org/package=mlogit, https://r-forge.r-project.org/projects/mlogit/
 
-Package license: GPL (>= 2)
+Package license: GPL-2
 
 Feedstock license: BSD 3-Clause
 
-Summary: Maximum Likelihood estimation of random utility discrete choice models, as described in Kenneth Train (2012) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
+Summary: Maximum Likelihood estimation of random utility discrete choice models, as described in Kenneth Train (2009) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
 
 
 
