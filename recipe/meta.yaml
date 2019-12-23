@@ -1,4 +1,4 @@
-{% set version = '1.0-1' %}
+{% set version = "1.0-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mlogit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mlogit/mlogit_{{ version }}.tar.gz
-  sha256: b452b71d4e256c2bd982aebcf6d8d1db7d4115a9cfd3ab79f9fe6f0f680350b2
+  sha256: 5cc3afefb37c065dc39a9c01ec610a66a3775f91246313a946575309f4e2b6a1
 
 build:
   merge_build_host: True  # [win]
