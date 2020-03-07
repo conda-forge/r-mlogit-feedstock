@@ -1,4 +1,4 @@
-{% set version = "1.0-2.1" %}
+{% set version = "1.0-3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mlogit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mlogit/mlogit_{{ version }}.tar.gz
-  sha256: 8200afc286e825969fda06007bc89e366a33353ec55ab1a2c358f6f5ace6d0bf
+  sha256: be466411349ba8be260976290fa243be0815509ed762590a215180be45b3cfd0
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -48,11 +48,10 @@ test:
 about:
   home: https://cran.r-project.org/package=mlogit, https://r-forge.r-project.org/projects/mlogit/
   license: GPL-2
-  summary: Maximum Likelihood estimation of random utility discrete choice models, as described
-    in Kenneth Train (2009) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
+  summary: Maximum Likelihood estimation of random utility discrete choice models, as described in Kenneth Train (2009) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
