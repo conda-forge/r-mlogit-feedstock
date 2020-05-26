@@ -25,6 +25,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-dfidx
     - r-formula
     - r-mass
     - r-rdpack
@@ -33,6 +34,7 @@ requirements:
     - r-zoo
   run:
     - r-base
+    - r-dfidx
     - r-formula
     - r-mass
     - r-rdpack
