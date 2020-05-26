@@ -3,7 +3,7 @@ About r-mlogit
 
 Home: https://cran.r-project.org/package=mlogit, https://r-forge.r-project.org/projects/mlogit/
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
