@@ -1,11 +1,11 @@
-About r-mlogit
-==============
+About r-mlogit-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mlogit-feedstock/blob/main/LICENSE.txt)
 
 Home: https://cran.r-project.org/package=mlogit, https://r-forge.r-project.org/projects/mlogit/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mlogit-feedstock/blob/main/LICENSE.txt)
 
 Summary: Maximum Likelihood estimation of random utility discrete choice models, as described in Kenneth Train (2009) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
 
