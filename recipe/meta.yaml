@@ -1,4 +1,4 @@
-{% set version = "1.1-1" %}
+{% set version = "1.1-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mlogit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mlogit/mlogit_{{ version }}.tar.gz
-  sha256: 6f3ea97db410be929a3078422f3d354d2f17855a21bbdc7c2c09d901e233d143
+  sha256: 899a394a1fbc6653a43a3ba1797ff6dd6a1b1662e5338d664d66e0f9c88f1cc5
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
