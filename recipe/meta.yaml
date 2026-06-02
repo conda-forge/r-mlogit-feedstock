@@ -3,7 +3,7 @@
 
 package:
   name: r-mlogit
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -17,28 +17,31 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-dfidx
     - r-formula
-    - r-mass
     - r-rdpack
+    - r-dfidx
     - r-lmtest
-    - r-statmod
-    - r-zoo
+    - r-micsr
+    - r-numderiv
   run:
     - r-base
-    - r-dfidx
     - r-formula
-    - r-mass
     - r-rdpack
+    - r-dfidx
     - r-lmtest
-    - r-statmod
-    - r-zoo
+    - r-micsr
+    - r-numderiv
 
 test:
   commands:
@@ -46,9 +49,11 @@ test:
     - "\"%R%\" -e \"library('mlogit')\""  # [win]
 
 about:
-  home: https://cran.r-project.org/package=mlogit, https://r-forge.r-project.org/projects/mlogit/
+  home: https://cran.r-project.org/package=mlogit
   license: GPL-2.0-or-later
-  summary: Maximum Likelihood estimation of random utility discrete choice models, as described in Kenneth Train (2009) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
+  summary: Maximum likelihood estimation of random utility discrete choice models. The software
+    is described in Croissant (2020) <doi:10.18637/jss.v095.i11> and the underlying
+    methods in Train (2009) <doi:10.1017/CBO9780511805271>.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
