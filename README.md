@@ -3,20 +3,21 @@ About r-mlogit-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mlogit-feedstock/blob/main/LICENSE.txt)
 
-Home: https://cran.r-project.org/package=mlogit, https://r-forge.r-project.org/projects/mlogit/
+Home: https://cran.r-project.org/package=mlogit
 
 Package license: GPL-2.0-or-later
 
-Summary: Maximum Likelihood estimation of random utility discrete choice models, as described in Kenneth Train (2009) Discrete Choice Methods with Simulations <doi:10.1017/CBO9780511805271>.
+Summary: Maximum likelihood estimation of random utility discrete choice models. The software is described in Croissant (2020) <doi:10.18637/jss.v095.i11> and the underlying methods in Train (2009) <doi:10.1017/CBO9780511805271>.
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1368&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mlogit-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/r-mlogit-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/r-mlogit-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -98,12 +99,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -130,7 +131,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/r-mlogit-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
